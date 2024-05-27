@@ -4,6 +4,7 @@
 ** Docs: https://tailwindcss.com/docs/configuration
 ** Default: https://github.com/tailwindcss/tailwindcss/blob/master/stubs/defaultConfig.stub.js
 */
+/* eslint-env node */
 module.exports = {
   theme: {
     darkSelector: '.dark-mode',

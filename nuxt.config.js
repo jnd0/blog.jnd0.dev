@@ -2,7 +2,7 @@ const path = require("path");
 
 export default {
 
-  mode: 'universal',
+  ssr: true,
   components: true,
   /*
   ** Headers of the page
