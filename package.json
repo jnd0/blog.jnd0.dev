@@ -12,14 +12,15 @@
   },
   "dependencies": {
     "@nuxt/content": "^1.15.1",
+    "node-fetch-native": "^1.6.4",
     "nuxt": "^2.17.3",
-    "vue-scrollactive": "^0.9.3"
+    "vue-scrollactive": "^0.9.3",
+    "@nuxtjs/pwa": "^3.3.5"
   },
   "devDependencies": {
     "@nuxt/components": "^1.2.6",
     "@nuxtjs/color-mode": "^1.0.2",
     "@nuxtjs/google-analytics": "^2.4.0",
-    "@nuxtjs/pwa": "^3.3.5",
     "@nuxtjs/tailwindcss": "^4.2.1",
     "tailwindcss-dark-mode": "^1.1.5",
     "tailwindcss-sepia-mode": "^1.0.0"
