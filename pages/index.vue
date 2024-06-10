@@ -21,8 +21,8 @@
     },
     async fetch() {
       this.articles = await this.$content('posts')
-        // .only(['title'])
-        .fetch()
+      .sortBy('date', 'desc') 
+      .fetch()
     },
     methods: {
       formatDate(date){

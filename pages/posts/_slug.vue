@@ -47,7 +47,7 @@
       // Go go next, previous functionality
       const [prev, next] = await $content("posts")
         .only(["title", "slug"])
-        .sortBy("createdAt", "asc")
+        .sortBy("createdAt", "desc")
         .surround(params.slug, {before: 1, after: 1})
         .fetch();
 
