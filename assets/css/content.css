@@ -1,14 +1,15 @@
 .dark-mode .nuxt-content {
-& h2,
-& h3,
-& blockquote {
+
+  & h2,
+  & h3,
+  & blockquote {
     @apply border-gray-800;
   }
 
-& > code,
-& li > code,
-& p > code,
-& h3 > code {
+  &>code,
+  & li>code,
+  & p>code,
+  & h3>code {
     @apply bg-gray-800;
   }
 }
@@ -16,37 +17,40 @@
 .nuxt-content h2 {
   @apply text-3xl font-black mb-4 pb-1 border-b -mt-12 pt-16;
 
-& > a {
+  &>a {
     @apply ml-6;
-&::before {
-   content: "#";
-   @apply text-teal-500 font-normal -ml-6 pr-1 absolute opacity-100;
- }
-}
+
+    &::before {
+      content: "#";
+      @apply text-teal-500 font-normal -ml-6 pr-1 absolute opacity-100;
+    }
+  }
 
 
-&:hover {
-& > a::before {
-    @apply opacity-100;
+  &:hover {
+    &>a::before {
+      @apply opacity-100;
+    }
   }
 }
-}
+
 .nuxt-content h3 {
   @apply text-2xl font-extrabold mb-2 pb-1 border-b -mt-12 pt-16;
 
-& > a {
+  &>a {
     @apply ml-6;
-&::before {
-   content: "#";
-   @apply text-teal-500 font-normal -ml-5 pr-1 absolute opacity-100;
- }
-}
 
-&:hover {
-& > a::before {
-    @apply opacity-100;
+    &::before {
+      content: "#";
+      @apply text-teal-500 font-normal -ml-5 pr-1 absolute opacity-100;
+    }
   }
-}
+
+  &:hover {
+    &>a::before {
+      @apply opacity-100;
+    }
+  }
 }
 
 .nuxt-content h4 {
@@ -54,26 +58,28 @@
 }
 
 @screen lg {
+
   .nuxt-content h2 a,
   .nuxt-content h3 a {
     @apply ml-0;
-&::before {
-   @apply opacity-0;
- }
-}
+
+    &::before {
+      @apply opacity-0;
+    }
+  }
 }
 
 .nuxt-content ul,
 .nuxt-content ol {
   @apply list-disc list-inside mb-4 pl-2;
 
-& > li {
+  &>li {
     @apply leading-7;
 
-& > ul {
-    @apply pl-4;
+    &>ul {
+      @apply pl-4;
+    }
   }
-}
 }
 
 .nuxt-content ol {
@@ -81,74 +87,161 @@
 }
 
 .nuxt-content {
-& a {
+  & a {
     @apply text-teal-500;
 
-&:hover {
-   @apply underline;
- }
-}
+    &:hover {
+      @apply underline;
+    }
+  }
 
-& p {
+  & p {
     @apply mb-4 leading-7;
   }
 
-& > blockquote {
+  &>blockquote {
     @apply py-2 pl-4 mb-4 border-l-4;
 
-& p:last-child {
-    @apply mb-0;
-  }
-}
-
-& > code,
-& li > code,
-& p > code {
-    @apply bg-gray-100 p-1 text-sm shadow-xs rounded;
+    & p:last-child {
+      @apply mb-0;
+    }
   }
 
-& h3 > code {
-    @apply bg-gray-100 p-1 text-lg shadow-xs rounded;
+  &>code,
+  & li>code,
+  & p>code {
+    @apply bg-gray-100 p-1 text-sm shadow-sm rounded;
   }
 
-& pre[class*="language-"] {
-    @apply rounded mt-0 mb-4 bg-gray-800 text-sm relative;
+  & h3>code {
+    @apply bg-gray-100 p-1 text-lg shadow-sm rounded;
+  }
 
-> code {
-  @apply bg-gray-800 relative;
-  text-shadow: none;
-}
-}
+  & pre[class*="language-"] {
+    @apply rounded mt-0 mb-4 text-sm relative;
+    @apply bg-gray-100 border border-gray-200;
 
-& video {
+    >code {
+      @apply bg-gray-100 relative;
+      text-shadow: none;
+    }
+
+    /* Remove token backgrounds */
+    .token {
+      background: transparent !important;
+    }
+  }
+
+  & video {
     @apply w-full border rounded shadow-md;
+  }
+}
+
+.dark-mode .nuxt-content {
+  & pre[class*="language-"] {
+    @apply bg-gray-800 border-gray-700;
+
+    >code {
+      @apply bg-gray-800;
+      color: #e2e8f0;
+      /* Light gray for base text */
+    }
+
+    /* Remove token backgrounds */
+    .token {
+      background: transparent !important;
+    }
+
+    /* Fix token colors for dark mode */
+    .token.comment,
+    .token.prolog,
+    .token.doctype,
+    .token.cdata {
+      color: #9ca3af;
+      /* Gray for comments */
+    }
+
+    .token.punctuation {
+      color: #e2e8f0;
+      /* Light gray for punctuation */
+    }
+
+    .token.property,
+    .token.tag,
+    .token.boolean,
+    .token.number,
+    .token.constant,
+    .token.symbol,
+    .token.deleted {
+      color: #f87171;
+      /* Red */
+    }
+
+    .token.selector,
+    .token.attr-name,
+    .token.string,
+    .token.char,
+    .token.builtin,
+    .token.inserted {
+      color: #34d399;
+      /* Green */
+    }
+
+    .token.operator,
+    .token.entity,
+    .token.url,
+    .language-css .token.string,
+    .style .token.string {
+      color: #fbbf24;
+      /* Yellow */
+    }
+
+    .token.atrule,
+    .token.attr-value,
+    .token.keyword {
+      color: #60a5fa;
+      /* Blue */
+    }
+
+    .token.function,
+    .token.class-name {
+      color: #f472b6;
+      /* Pink */
+    }
+
+    .token.regex,
+    .token.important,
+    .token.variable {
+      color: #a78bfa;
+      /* Purple */
+    }
   }
 }
 
 .nuxt-content-highlight {
   @apply relative;
 
-& > .filename {
+  &>.filename {
     @apply absolute right-0 top-0 text-gray-600 font-light z-10 mr-2 mt-1 text-sm;
   }
 
-& > pre {
-& > .copy {
-    @apply hidden absolute right-0 bottom-0 shadow-lg px-3 py-1 text-white text-sm uppercase font-sans rounded-md bg-transparent border border-white tracking-wide font-semibold mr-3 mb-3;
+  &>pre {
+    &>.copy {
+      @apply hidden absolute right-0 bottom-0 shadow-lg px-3 py-1 text-white text-sm uppercase font-sans rounded-md bg-transparent border border-white tracking-wide font-semibold mr-3 mb-3;
 
-&:hover {
-   @apply bg-gray-700;
- }
+      &:hover {
+        @apply bg-gray-700;
+      }
 
-&:focus {
-   @apply outline-none bg-gray-900;
- }
-}
+      &:focus {
+        @apply outline-none bg-gray-900;
+      }
+    }
 
-&:hover {
-& > .copy {
-    @apply block;
+    &:hover {
+      &>.copy {
+        @apply block;
+      }
+    }
   }
-}
-}
 }

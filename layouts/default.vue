@@ -1,9 +1,8 @@
 <template>
-  <div class="font-mono dark:text-white dark:bg-gray-900 sepia:bg-orange-200">
+  <div class="font-mono dark:text-white dark:bg-gray-900 sepia:bg-orange-200 min-h-screen flex flex-col">
     <nav-bar />
-    <main class="container mx-auto min-h-screen px-4 lg:px-8 ">
+    <main class="container mx-auto flex-grow px-4 lg:px-8">
       <div class="flex flex-wrap relative">
-
         <nuxt class="w-full lg:w-4/5"/>
       </div>
     </main>

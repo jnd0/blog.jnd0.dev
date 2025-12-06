@@ -5,12 +5,15 @@
 ** Default: https://github.com/tailwindcss/tailwindcss/blob/master/stubs/defaultConfig.stub.js
 */
 /* eslint-env node */
+const colors = require('tailwindcss/colors')
+
 module.exports = {
   theme: {
     darkSelector: '.dark-mode',
     sepiaSelector: '.sepia-mode',
     extend: {
       colors: {
+        teal: colors.teal,
         nuxt: {
           gray: '#243746',
           lightgreen: '#41B38A',

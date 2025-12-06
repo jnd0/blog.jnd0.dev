@@ -32,7 +32,8 @@ export default {
   ** Plugins to load before mounting the App
   */
   plugins: [
-    '~/plugins/vue-scrollactive'
+    '~/plugins/vue-scrollactive',
+    { src: '~/plugins/mermaid.client.js', mode: 'client' }
   ],
   /*
   ** Nuxt.js dev-modules
@@ -53,6 +54,11 @@ export default {
     '@nuxt/content'
   ],
 
+  // Disable the live edit feature
+  content: {
+    liveEdit: false
+  },
+
   /*
   ** Build configuration
   */
@@ -60,7 +66,7 @@ export default {
     /*
     ** You can extend webpack config here
     */
-    extend (config, ctx) {
+    extend(config, ctx) {
     }
   },
 

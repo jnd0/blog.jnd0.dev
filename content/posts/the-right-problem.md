@@ -7,8 +7,7 @@ tags: post blog problems solutions
 
 
 To succeed in today's fast-paced world, it's not enough to work hard. You also need to make sure that your efforts are in line with what people need and want.
-It's not enough to just be passionate about your work. You also need to understand the problems your target audience is facing and make sure your product or service addresses those problems.
-
+It's not enough to just be passionate about your work. You also need to understand the problems your target audience is facing and make sure your product or service addresses those problem
 ## Finding the Right Problem
 
 One must conduct thorough user research, perform detailed market analysis, and keenly observe user behaviour. The launch of Google Glass serves as a cautionary exampleThe debut of Google Glass stands as a valuable lesson in product development and market reception. Despite significant efforts and resources invested in its development, the product failed to deliver tangible benefits to users. This failure is largely attributed to a lack of focus on solving the right problems, or in this case the product being launched ahead of it’s time, leading to wasted time and resources. Google Glass did not adequately address real user needs or consider the social implications of the technology, resulting in poor adoption and eventual discontinuation.
