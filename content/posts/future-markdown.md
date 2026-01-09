@@ -2,7 +2,7 @@
 title: "The Future is Markdown: The Lingua Franca of the AI Era"
 date: 2026-01-09
 author: jnd0
-tags: markdown ai developer-tools llm
+tags: markdown, ai, developer-tools, llm
 ---
 
 ## The Shift from "Read-Only" to "Machine-Actionable"
